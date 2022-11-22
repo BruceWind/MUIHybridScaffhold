@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/App.test.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1669029699364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1669029699364,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport { render, screen } from '@testing-library/react';\nimport App from './App';\n\ntest('renders learn react link', () => {\n  render(<App />);\n  // const linkElement = screen.getByText(/learn react/i);\n  // expect(linkElement).toBeInTheDocument();\n});\n"
+        }
+    ]
+}

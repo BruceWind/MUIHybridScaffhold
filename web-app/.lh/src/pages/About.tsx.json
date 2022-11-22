@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/About.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1669017124264,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1669017124264,
+            "name": "Commit-0",
+            "content": "import React, { ReactElement, FC } from \"react\";\nimport { Box, Typography } from \"@mui/material\";\n\nconst About: FC<any> = (): ReactElement => {\n    return (\n        <Box\n            sx={{\n                flexGrow: 1,\n                backgroundColor: \"whitesmoke\",\n                display: \"flex\",\n                justifyContent: \"center\",\n                alignItems: \"center\",\n            }}\n        >\n            <Typography variant=\"h3\">About</Typography>\n        </Box>\n    );\n};\n\nexport default About;"
+        }
+    ]
+}
