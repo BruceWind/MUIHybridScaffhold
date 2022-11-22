@@ -11,6 +11,12 @@ const Home: FC<any> = (): ReactElement => {
     //coponentdidmount
     React.useEffect(() => {
         console.log("componentdidmount");
+
+        window.bridgeRegister((cmd: String, obj: any) => {
+            console.log("Home", cmd, obj);
+        })
+
+
     }, []);
 
     return (

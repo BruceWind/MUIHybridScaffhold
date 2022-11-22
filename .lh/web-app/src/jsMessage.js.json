@@ -1,0 +1,102 @@
+{
+    "sourceFile": "web-app/src/jsMessage.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 21,
+            "patches": [
+                {
+                    "date": 1669112642260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1669112651021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n function onMessage(cmd, args) {\n     console.log(`Received message: ${cmd} ${JSON.stringify(args)}`);\n }\n \n-window.\n\\ No newline at end of file\n+window.onMessage = on\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669112813391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,7 @@\n function onMessage(cmd, args) {\n     console.log(`Received message: ${cmd} ${JSON.stringify(args)}`);\n }\n \n-window.onMessage = on\n\\ No newline at end of file\n+window.onMessage = onMessage;\n+\n+\n"
+                },
+                {
+                    "date": 1669112845984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+\n+\n function onMessage(cmd, args) {\n     console.log(`Received message: ${cmd} ${JSON.stringify(args)}`);\n }\n \n"
+                },
+                {
+                    "date": 1669112860174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n \n-\n+// cmd: string, args should be object.\n function onMessage(cmd, args) {\n     console.log(`Received message: ${cmd} ${JSON.stringify(args)}`);\n }\n \n"
+                },
+                {
+                    "date": 1669112876273,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,8 @@\n function onMessage(cmd, args) {\n     console.log(`Received message: ${cmd} ${JSON.stringify(args)}`);\n }\n \n+// a signficant \n window.onMessage = onMessage;\n \n \n"
+                },
+                {
+                    "date": 1669112882576,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n function onMessage(cmd, args) {\n     console.log(`Received message: ${cmd} ${JSON.stringify(args)}`);\n }\n \n-// a signficant \n+// a signficant line code, whichi make \n window.onMessage = onMessage;\n \n \n"
+                },
+                {
+                    "date": 1669112888422,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n function onMessage(cmd, args) {\n     console.log(`Received message: ${cmd} ${JSON.stringify(args)}`);\n }\n \n-// a signficant line code, whichi make \n+// a signficant line code, whichi make native all ''\n window.onMessage = onMessage;\n \n \n"
+                },
+                {
+                    "date": 1669112897198,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n function onMessage(cmd, args) {\n     console.log(`Received message: ${cmd} ${JSON.stringify(args)}`);\n }\n \n-// a signficant line code, whichi make native all ''\n+// a signficant line code, whichi make native all function 'onMessage' work\n window.onMessage = onMessage;\n \n \n"
+                },
+                {
+                    "date": 1669113022699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,10 @@\n function onMessage(cmd, args) {\n     console.log(`Received message: ${cmd} ${JSON.stringify(args)}`);\n }\n \n-// a signficant line code, whichi make native all function 'onMessage' work\n+// a signficant line code, whichi make native all function 'onMessage' works well.\n window.onMessage = onMessage;\n \n \n+\n+const var someArray = [];\n"
+                },
+                {
+                    "date": 1669113030252,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,5 @@\n window.onMessage = onMessage;\n \n \n \n-const var someArray = [];\n+const methods = [];\n"
+                },
+                {
+                    "date": 1669113036844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,5 @@\n window.onMessage = onMessage;\n \n \n \n-const methods = [];\n+const regiestermethods = [];\n"
+                },
+                {
+                    "date": 1669113150456,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,5 +8,9 @@\n window.onMessage = onMessage;\n \n \n \n-const regiestermethods = [];\n+const regiesteredMethods = [];\n+\n+\n+\n+function re\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669113160591,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,5 @@\n const regiesteredMethods = [];\n \n \n \n-function re\n\\ No newline at end of file\n+function register(func)\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669113170675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,5 +12,9 @@\n const regiesteredMethods = [];\n \n \n \n-function register(func)\n\\ No newline at end of file\n+function register(func) {\n+    regiesteredMethods.push(func);\n+}\n+\n+function un\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669113177885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,5 +16,7 @@\n function register(func) {\n     regiesteredMethods.push(func);\n }\n \n-function un\n\\ No newline at end of file\n+function register(func) {\n+    \n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669113187136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,7 +16,8 @@\n function register(func) {\n     regiesteredMethods.push(func);\n }\n \n+// remove func from \n function register(func) {\n     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669113192471,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,8 +16,8 @@\n function register(func) {\n     regiesteredMethods.push(func);\n }\n \n-// remove func from \n+// remove func from regiesteredMethods.\n function register(func) {\n     \n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669113199920,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,6 +18,6 @@\n }\n \n // remove func from regiesteredMethods.\n function register(func) {\n-    \n+    regiesteredMethods = regiesteredMethods.filter(f => f !== func);\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669113213253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,7 +17,10 @@\n     regiesteredMethods.push(func);\n }\n \n // remove func from regiesteredMethods.\n-function register(func) {\n-    regiesteredMethods = regiesteredMethods.filter(f => f !== func);\n+function unregister(func) {\n+    const index = regiesteredMethods.indexOf(func);\n+    if (index !== -1) {\n+        regiesteredMethods.splice(index, 1);\n+    }\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669113240209,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n // cmd: string, args should be object.\n function onMessage(cmd, args) {\n     console.log(`Received message: ${cmd} ${JSON.stringify(args)}`);\n \n-    re\n+    regiesteredMethods.forEach((func) => {\n }\n \n // a signficant line code, whichi make native all function 'onMessage' works well.\n window.onMessage = onMessage;\n"
+                },
+                {
+                    "date": 1669113272132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n const regiesteredMethods = [];\n \n \n \n-function bridgeregister(func) {\n+function bridgeegister(func) {\n     regiesteredMethods.push(func);\n }\n \n // remove func from regiesteredMethods.\n"
+                }
+            ],
+            "date": 1669112642260,
+            "name": "Commit-0",
+            "content": "function onMessage(cmd, args) {\n    console.log(`Received message: ${cmd} ${JSON.stringify(args)}`);\n}\n\nwindow."
+        }
+    ]
+}

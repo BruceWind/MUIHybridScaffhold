@@ -1,0 +1,66 @@
+{
+    "sourceFile": "web-app/src/pages/Home.tsx",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 12,
+            "patches": [
+                {
+                    "date": 1669113338182,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1669113343489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     //coponentdidmount\n     React.useEffect(() => {\n         console.log(\"componentdidmount\");\n-        \n+        window.\n     }, []);\n \n     return (\n         <Box sx={{\n"
+                },
+                {
+                    "date": 1669113351596,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     //coponentdidmount\n     React.useEffect(() => {\n         console.log(\"componentdidmount\");\n-        window.\n+        window.bridgeRegister(())\n     }, []);\n \n     return (\n         <Box sx={{\n"
+                },
+                {
+                    "date": 1669113358766,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,11 @@\n \n     //coponentdidmount\n     React.useEffect(() => {\n         console.log(\"componentdidmount\");\n-        window.bridgeRegister(())\n+        window.bridgeRegister((cmd, obj) => {\n+\n+        })\n     }, []);\n \n     return (\n         <Box sx={{\n"
+                },
+                {
+                    "date": 1669113369287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n \n     //coponentdidmount\n     React.useEffect(() => {\n         console.log(\"componentdidmount\");\n-        window.bridgeRegister((cmd, obj) => {\n+        window.bridgeRegister((cmd: String, obj: any) => {\n \n         })\n     }, []);\n \n"
+                },
+                {
+                    "date": 1669113377997,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     //coponentdidmount\n     React.useEffect(() => {\n         console.log(\"componentdidmount\");\n         window.bridgeRegister((cmd: String, obj: any) => {\n-\n+            console.\n         })\n     }, []);\n \n     return (\n"
+                },
+                {
+                    "date": 1669113389145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     //coponentdidmount\n     React.useEffect(() => {\n         console.log(\"componentdidmount\");\n         window.bridgeRegister((cmd: String, obj: any) => {\n-            console.\n+            console.log(\"Homepage\", cmd, obj);\n         })\n     }, []);\n \n     return (\n"
+                },
+                {
+                    "date": 1669113406982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,11 @@\n     //coponentdidmount\n     React.useEffect(() => {\n         console.log(\"componentdidmount\");\n         window.bridgeRegister((cmd: String, obj: any) => {\n-            console.log(\"Homepage\", cmd, obj);\n+            console.log(\"Home\", cmd, obj);\n         })\n+        \n     }, []);\n \n     return (\n         <Box sx={{\n"
+                },
+                {
+                    "date": 1669116057310,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,12 +10,15 @@\n \n     //coponentdidmount\n     React.useEffect(() => {\n         console.log(\"componentdidmount\");\n+\n         window.bridgeRegister((cmd: String, obj: any) => {\n             console.log(\"Home\", cmd, obj);\n         })\n+\n         \n+\n     }, []);\n \n     return (\n         <Box sx={{\n"
+                },
+                {
+                    "date": 1669116069156,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         window.bridgeRegister((cmd: String, obj: any) => {\n             console.log(\"Home\", cmd, obj);\n         })\n \n-        \n+        cons hybridge.getAppVersion()\n \n     }, []);\n \n     return (\n"
+                },
+                {
+                    "date": 1669116486061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         window.bridgeRegister((cmd: String, obj: any) => {\n             console.log(\"Home\", cmd, obj);\n         })\n \n-        cons hybridge.getAppVersion()\n+        hybridge.getAppVersion()\n \n     }, []);\n \n     return (\n"
+                },
+                {
+                    "date": 1669116494999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n         window.bridgeRegister((cmd: String, obj: any) => {\n             console.log(\"Home\", cmd, obj);\n         })\n \n-        hybridge.getAppVersion()\n+        window.hybridge.getAppVersion()\n \n     }, []);\n \n     return (\n"
+                },
+                {
+                    "date": 1669116502412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,8 @@\n         window.bridgeRegister((cmd: String, obj: any) => {\n             console.log(\"Home\", cmd, obj);\n         })\n \n-        window.hybridge.getAppVersion()\n \n     }, []);\n \n     return (\n"
+                }
+            ],
+            "date": 1669113338182,
+            "name": "Commit-0",
+            "content": "import React, { ReactElement, FC } from \"react\";\nimport { Box, Typography, Button } from \"@mui/material\";\nimport { useNavigate } from \"react-router-dom\";\n\n\nconst Home: FC<any> = (): ReactElement => {\n\n    // const navigate = useNavigate();\n\n\n    //coponentdidmount\n    React.useEffect(() => {\n        console.log(\"componentdidmount\");\n        \n    }, []);\n\n    return (\n        <Box sx={{\n            flexGrow: 1,\n            backgroundColor: 'blue',\n            display: 'flex',\n            justifyContent: 'center',\n            alignItems: 'center'\n        }}>\n\n            <Typography variant=\"h3\">Home</Typography>\n\n            {/* <Button onClick={() => navigate(\"/products\")}>\n                Go Products\n            </Button> */}\n        </Box >\n    );\n};\n\nexport default Home;"
+        }
+    ]
+}

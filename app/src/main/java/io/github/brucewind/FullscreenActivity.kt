@@ -1,16 +1,13 @@
 package io.github.brucewind
 
-import android.support.v7.app.AppCompatActivity
 import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
+import android.support.v7.app.AppCompatActivity
 import android.view.*
 import android.viewbinding.BuildConfig
 import android.webkit.WebView
-import android.widget.FrameLayout
-import android.widget.LinearLayout
+import io.github.brucewind.bridge.HyBridge
 import io.github.brucewind.databinding.ActivityFullscreenBinding
 
 /**
@@ -75,12 +72,31 @@ class FullscreenActivity : AppCompatActivity() {
         binding.webviewContainer.addView(webView)
         // load url from assets.
         webView.loadUrl("file:///android_asset/web/index.html")
+        webView.addJavascriptInterface(HyBridge(this@FullscreenActivity), "hybridge")
 
     }
 
+    override fun onPause() {
+        super.onPause()
+
+        if(this::webView.isInitialized) {
+            webView.loadUrl("javascript:onMessage('page', {fun:'onPause'});")
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        if(this::webView.isInitialized) {
+            webView.loadUrl("javascript:onMessage('page', {fun:'onResume'});")
+        }
+    }
+
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+
         // Check if the key event was the Back button and if there's history
         if (keyCode == KeyEvent.KEYCODE_BACK && webView.canGoBack()) {
+            webView.loadUrl("javascript:onMessage('page', {fun:KEYCODE_BACK});")
             webView.goBack()
             return true
         }
@@ -92,5 +108,7 @@ class FullscreenActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         binding.webviewContainer.removeAllViews()
+
+        webView.loadUrl("javascript:onMessage('page', {fun:onDestroy});")
     }
 }
