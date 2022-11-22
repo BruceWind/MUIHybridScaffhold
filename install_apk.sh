@@ -7,7 +7,7 @@
 set -e
 sleep 3
 echo "###############################################################"
-# before building, you must ensure node and go are installed.
+# before building, you must ensure node and java are installed.
 java -version
 node -v
 
