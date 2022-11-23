@@ -31,3 +31,8 @@ function bridgeUnregister(func) {
 
 window.bridgeRegister = bridgeRegister;
 window.bridgeUnregister = bridgeUnregister;
+
+
+// This line is important because it let you can review all web pages in web-browser.
+// index.d.ts is another important part.
+window.hybridge = window.hybridge || {};

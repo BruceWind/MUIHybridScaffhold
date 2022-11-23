@@ -28,9 +28,6 @@ function App() {
   React.useEffect(() => {
     console.log("App componentdidmount");
 
-    const ver = window.hybridge.getAppVersion();
-    console.log("App version", ver);
-
   }, []);
 
   // define theme

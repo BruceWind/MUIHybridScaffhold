@@ -17,6 +17,10 @@ const Home: FC<any> = (): ReactElement => {
         })
 
 
+        // if (window.hybridge.getAppVersion) {
+        //     const ver = window.hybridge.getAppVersion();
+        //     console.log("App version", ver);
+        // }
     }, []);
 
     return (
@@ -28,7 +32,19 @@ const Home: FC<any> = (): ReactElement => {
             alignItems: 'center'
         }}>
 
-            <Typography variant="h3">Home</Typography>
+            <Typography variant="h3">Home </Typography>
+            {/* new line */}
+            <br />
+
+
+            {
+                window.hybridge.hasOwnProperty('getAppVersion')
+                    ?
+                    <Typography>App Version: {window.hybridge?.getAppVersion()}</Typography>
+                    : null
+            }
+
+
 
             {/* <Button onClick={() => navigate("/products")}>
                 Go Products
