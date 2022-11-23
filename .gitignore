@@ -97,10 +97,7 @@ hs_err_pid*
 *.so
 *.so.*
 *.dylib
-
-# Executables
-*.exe
-*.out
+Products
 *.app
 *.i*86
 *.x86_64
@@ -138,9 +135,7 @@ dkms.conf
 # Sensitive or high-churn files
 .idea/**/dataSources/
 .idea/**/dataSources.ids
-.idea/**/dataSources.local.xml
-.idea/**/sqlDataSources.xml
-.idea/**/dynamic.xml
+.idea/**/dataSources.local.xmlProducts
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
 
@@ -459,5 +454,6 @@ hs_err_pid*
 
 build/
 
-
 app/src/main/assets/web
+
+.lh
