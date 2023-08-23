@@ -1,8 +1,9 @@
 # MUIHybridScaffhold
 
 A hybrid app scaffolding for MUI.
+I made this for some frontend developers who want to establish an Android app with ReactJS and WebView.
 
-## Usage
+## View this app on your phone
 
 ```bash
 ./install_app.sh
