@@ -1,7 +1,10 @@
 # MUIHybridScaffhold
 
-A hybrid app scaffolding for MUI.
-I made this for some frontend developers who want to establish an Android app with ReactJS and WebView.
+
+MUIHybridScaffold is a scaffold for creating hybrid apps using MUI (Material-UI) framework.
+
+This repo is designed to assist front-end developers in setting up Android applications that utilize ReactJS and WebView. 
+
 
 ## View this app on your phone
 
